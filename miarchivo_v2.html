@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Clase antes de vacaciones</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/chota@latest">
+</head>
+<body style="color:white">
+   <div id="contenedor">
+     <div class="elemento"> Sección 1</div>
+     <div class="elemento"> Sección 2</div>
+     <div class="elemento"> Sección 3</div>
+     <div id="encabezado"></div> 
+     <div id="f"></div>
+     <div id="julieta"></div>
+   </div> 
+
+   <button id="libro" type="button">Click</button>
+   <p id="uno"></p>
+
+   <button id="Artista1" type="button">Artista</button>
+   <p id="dos"></p>
+   <p id="imagen"></p>
+
+   <button id="Artista2" type="button">Artista companero</button>
+   <p id="tres"></p>
+   <p id="imagen1"></p>
+
+  <style >
+    
+   
+
+  </style>
+   
+   
+
+  
+
+  
+<script >
+      let t=1986;
+      const c=3.28;
+      console.log(t);
+      let p={"titulo":"Llano en llamas", "autor":"Juan Rulfo"};
+      console.log(p.autor)
+      
+      async function obtenerJSON(){
+        const respuesta = await fetch('archivo.json');
+        const datos = await respuesta.json();
+        console.log(datos);
+
+        let d=document.createElement("p");
+        d.textContent= datos.titulo+ " de " +datos.autor;
+        document.getElementById("f").appendChild(d);
+        d.setAttribute("style", "color:blue","font-weight:bold");
+
+      }
+
+      obtenerJSON();
+        
+      async function obtenerRomeoyJulieta(){
+        const respuesta = await fetch('http://openlibrary.org/subjects/love.json?published_in=1500-1600');
+        const datos = await respuesta.json();
+        
+
+        let d=document.createElement("p");
+        d.textContent= datos.works[0].title;
+        document.getElementById("julieta").appendChild(d);
+        d.setAttribute("style", "color:blue","font-weight:bold");
+
+        
+
+      }
+
+
+      obtenerRomeoyJulieta();
+
+      async function obtenerLibro(){
+        const respuesta = await fetch('http://openlibrary.org/subjects/love.json?published_in=1500-1600');
+        const datos = await respuesta.json();
+        
+
+        let d=document.createElement("p");
+        d.textContent= datos.works[2].title;
+        document.getElementById("uno").appendChild(d);
+        d.setAttribute("style", "color:blue");
+
+        
+
+      }
+      document.getElementById("libro").addEventListener("click", obtenerLibro);
+
+      async function obtenerArtista(){
+        const respuesta = await fetch('https://www.theaudiodb.com/api/v1/json/123/search.php?s=kanye+west');
+        const datos = await respuesta.json();
+
+         const imagen=document.createElement("img");
+         imagen.src=datos.artists[0].strArtistThumb;
+         imagen.style.width = "200px";
+         document.getElementById("imagen").appendChild(imagen);
+        
+
+        let d=document.createElement("p");
+        d.textContent= datos.artists[0].strBiography;
+        document.getElementById("dos").appendChild(d);
+        d.setAttribute("style", "color:yellow");
+      }
+      document.getElementById("Artista1").addEventListener("click", obtenerArtista);
+
+      async function obtenerArtistaComp(){
+        const respuesta = await fetch('https://www.theaudiodb.com/api/v1/json/123/search.php?s=ajr');
+        const datos = await respuesta.json();
+        
+        const imagen=document.createElement("img");
+         imagen.src=datos.artists[0].strArtistThumb;
+         imagen.style.width = "200px";
+         document.getElementById("imagen1").appendChild(imagen);
+
+        let d=document.createElement("p");
+        d.textContent= datos.artists[0].strBiography;
+        document.getElementById("tres").appendChild(d);
+        d.setAttribute("style", "color:yellow");
+      }
+      document.getElementById("Artista2").addEventListener("click", obtenerArtistaComp);
+
+      
+
+
+</script>
+
+
+
+</body>
+</html>

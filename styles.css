@@ -1,0 +1,18 @@
+body{
+    background-color: blueviolet;
+    color: chartreuse;
+}
+
+div{
+    border: 5px white solid;
+}
+
+#contenedor {
+    border: 10px yellow solid;
+    display: grid;
+
+grid-template-columns: 2fr 2fr;
+grid-template-rows: 1fr 4fr;
+
+
+}
