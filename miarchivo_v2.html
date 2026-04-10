@@ -5,7 +5,7 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://unpkg.com/chota@latest">
 </head>
-<body style="color:white">
+<body style="color:black">
    <div id="contenedor">
      <div class="elemento"> Sección 1</div>
      <div class="elemento"> Sección 2</div>
@@ -103,7 +103,7 @@
         let d=document.createElement("p");
         d.textContent= datos.artists[0].strBiography;
         document.getElementById("dos").appendChild(d);
-        d.setAttribute("style", "color:yellow");
+        d.setAttribute("style", "color:black");
       }
       document.getElementById("Artista1").addEventListener("click", obtenerArtista);
 
@@ -119,7 +119,7 @@
         let d=document.createElement("p");
         d.textContent= datos.artists[0].strBiography;
         document.getElementById("tres").appendChild(d);
-        d.setAttribute("style", "color:yellow");
+        d.setAttribute("style", "color:black");
       }
       document.getElementById("Artista2").addEventListener("click", obtenerArtistaComp);
 
