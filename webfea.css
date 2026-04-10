@@ -1,0 +1,20 @@
+body {
+  background-color: black;
+  color: lime;
+}
+h2 {
+  background-color: red;
+}
+.box {
+  border: 10px dotted #000;
+  margin: 40px;
+  padding: 30px;
+}
+#idExample {
+  color: pink;
+}
+.cssparte{
+  background-image: url("lebronjames.jpg");
+
+  padding: 20px;
+}
