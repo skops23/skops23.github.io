@@ -8,7 +8,7 @@ div{
 }
 
 #contenedor {
-    border: 10px yellow solid;
+    border: 10px black solid;
     display: grid;
 
 grid-template-columns: 2fr 2fr;
