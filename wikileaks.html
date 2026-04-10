@@ -3,45 +3,85 @@
     <head>
         <title>Wikileaks</title>
         <meta charset="UTF-8">
+        <link rel="stylesheet" href="estilos.css">
     </head>
 
     <body>
-        <table>
-            <tr>
-                <td><h1>WikiLeaks</h1> </td>
-                <td><a href="">Leaks</a></td>
-                <td><a href="">News</a></td>
-                <td><a href="">About</a></td>
-                <td><a href="">Partners</a></td>
-            </tr>
-        </table>
+        <style>
+            body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            }
+        </style>
+        <header>
+            <div class="logo">WikiLeaks</div>
 
-        <center><form action="/search_results.html" method="get" role="search">
-            <input type="search" id="site-search" name="q" placeholder="Search Keywords">
-            <button type="submit">Search</button>
-        </form></center>
+            <nav>
+                <a href="#">Leaks</a>
+                <a href="#">News</a>
+                <a href="#">About</a>
+                <a href="#">Partners</a>
+            </nav>
+
+            <div class="buttons">
+                <button class="donate">Donate</button>
+                <button class="submit">Submit</button>
+            </div>
+        </header>
+
+        <div class="search">
+            <div class="search-box">
+                <input type="text" placeholder="Search Keywords">
+                <button class="btn-search" type="submit"></button>
+            </div>    
+        </div>
  
-        <center><ul>
-            <li><a href="">Intelligence</a></li>
-            <li><a href="">Global Economy</a></li>
-            <li><a href="">International Politics</a></li>
-            <li><a href="">Corporations</a></li>
-            <li><a href="">Government</a></li>
-            <li><a href="">War & Military</a></li>
-        </ul></center>
+        <div class="categorias">
+            <span>Intelligence</span>
+            <span>Global Economy</span>
+            <span>International Politics</span>
+            <span>Corporations</span>
+            <span>Government</span>
+            <span>War & Military</span>
+        </div>
 
 
+        <div class="feat">
+            <p>
+                Featured
+            </p>
+        </div>
 
-        <h2>Featured</h2>
+        <div class="featured">
 
-        <img src="pedrosanchez.png" alt="The Intolerance Network" width="360" height="240">
-        <h3>The Intolerance Network</h3>
-        <p>
-            "Today, 5th August 2021, WikiLeaks publishes "The Intolerance
-            <br>
-             Network" over 17,000 documents from internationally active right
-            <br>
-              wing campaigning organisations HazteOir and CitizenGO." 
-        </p>
+            <div class="card">
+                <img src="pedrosanchez.png" alt="The Intolerance Network">
+                
+                <h3>The Intolerance Network</h3>
+                <p>
+                   Today, 5th August 2021, WikiLeaks publishes "The Intolerance Network" over 17,000 documents from internationally active rightwing campaigning organisations HazteOir and CitizenGO. 
+                </p>
+                <div class="fecha">05 August 2021</div>
+            </div>
+
+            <div class="card">
+                <img src="fishrot.jpg" alt="Fishrot">
+                <h3>Fishrot</h3>
+                <p>
+                    Today, November 12, WikiLeaks publishes over 30000 documents from SAMHERJI
+                </p>
+
+            </div>
+
+            <div class="card">
+                <img src="OPCWd.png" alt="OPCW Douma">
+                <h3>OPCW Douma</h3>
+                <p>
+                    Today, October 23, WikiLeaks publishes a statement made by a panel that listened to testimony and reviewed evidence from a whistleblower from the OPCW (update)
+                </p>
+            </div>
+        </div>
+
+        
     </body>
 </html>
